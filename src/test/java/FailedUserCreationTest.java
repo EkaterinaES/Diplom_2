@@ -50,7 +50,7 @@ public class FailedUserCreationTest {
     @Test
     @DisplayName("Сreating a user without one of the required parameters")
     @Description("Send POST request to /api/auth/register")
-    public void createUniqueUser() {
+    public void createUserWithoutOneParam() {
         Response response = userMetods.createUser(user);
         response.then()
                 .spec(responseSpecification)

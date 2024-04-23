@@ -1,12 +1,14 @@
-public class AuthUser {
+public class AuthUserWithToken {
     private String email;
     private String password;
+    private String accessToken;
 
-    public AuthUser(String email, String password) {
+    public AuthUserWithToken(String email, String password, String accessToken) {
         this.email = email;
         this.password = password;
+        this.accessToken = accessToken;
     }
-    public AuthUser(){}
+    public AuthUserWithToken(){}
 
     public String getEmail() {
         return email;
@@ -24,5 +26,11 @@ public class AuthUser {
         this.password = password;
     }
 
-}
+    public String getAccessToken() {
+        return accessToken;
+    }
 
+    public void setAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+    }
+}

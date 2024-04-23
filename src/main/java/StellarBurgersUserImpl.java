@@ -37,11 +37,20 @@ public class StellarBurgersUserImpl implements StellarBurgersUser {
                 .delete(DELETE_USER_ENDPOINT);
     }
 
+
     @Override
     public Response authUser(AuthUser authUser) {
         return given()
                 .spec(requestSpecification)
                 .body(authUser)
+                .post(AUTH_USER_ENDPOINT);
+    }
+
+    @Override
+    public Response authUserToken(AuthUserWithToken authUserWithToken) {
+        return given()
+                .spec(requestSpecification)
+                .body(authUserWithToken)
                 .post(AUTH_USER_ENDPOINT);
     }
 
