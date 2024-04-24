@@ -56,7 +56,7 @@ public class CreatOrderAuthUserTest {
                 .statusCode(200);
     }
     @Test
-    @DisplayName("Сreating an order with ingredients by an authorized user.")
+    @DisplayName("Сreating an order without ingredients by an authorized user.")
     @Description("Send POST request to /api/orders")
     public void createOrderWithoutIngregientsAfterAuth() {
         Response response = orderMetods.creatOrderByAuthorizedUser(orderWithoutIngredients, accessTokenForAuthAndDelete);
