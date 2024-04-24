@@ -42,12 +42,6 @@ public class CreateUserTest {
                 .assertThat().body("success", equalTo(true))
                 .and()
                 .statusCode(200);
-//        authUser = new AuthUser(email, password, accessToken);
-//        Response response1 = userMetods.authUser(authUser);//авторизоваться
-//        response1.then().log().all().assertThat().body("success", equalTo(true))
-//                .and()
-//                .statusCode(200);
-
     }
 
     @Test
@@ -66,8 +60,7 @@ public class CreateUserTest {
     @After
     public void cleanUp() {
         StringBuilder accessTokenWithoutBearer = new StringBuilder(accessToken);
-        accessTokenWithoutBearer.delete(0, 7);
-        String accessTokenForDelete = accessTokenWithoutBearer.toString();
+        String accessTokenForDelete = accessTokenWithoutBearer.delete(0, 7).toString();
         userMetods.deleteUser(accessTokenForDelete);
     }
 }

@@ -4,18 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b2a407d-c0af-4136-9f9f-d4e787412018" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/AuthUserWithToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/FailedLoginUserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/LoginUserTest.java" afterDir="false" />
+    <list default="true" id="8b2a407d-c0af-4136-9f9f-d4e787412018" name="Changes" comment="Add tests for creating and receiving order.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/StellarBurgersOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/StellarBurgersOrderImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/CreatOrderAuthUserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/CreatOrderWithoutAuthTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/GetOrderAuthUserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/GetOrderUnauthUserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/UpdateDataUserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AuthUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AuthUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AuthUserWithToken.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/StellarBurgersUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StellarBurgersUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/StellarBurgersUserImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StellarBurgersUserImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/CreateUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CreateUserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/FailedUserCreationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FailedUserCreationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LoginUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LoginUserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +44,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 3
 }]]></component>
@@ -58,52 +64,52 @@
     "git-widget-placeholder": "develop__2"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.FailedLoginUserTest.loginUnderAnExistingUser">
-    <configuration name="CreateUserTest.createUniqueUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CreatOrderAuthUserTest.createOrderWithoutIngregientsAfterAuth">
+    <configuration name="CreatOrderAuthUserTest.createOrderWithIngredientsAfterAuth" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Diplom_2" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CreateUserTest" />
-      <option name="METHOD_NAME" value="createUniqueUser" />
+      <option name="MAIN_CLASS_NAME" value="CreatOrderAuthUserTest" />
+      <option name="METHOD_NAME" value="createOrderWithIngredientsAfterAuth" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FailedLoginUserTest.loginUnderAnExistingUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CreatOrderAuthUserTest.createOrderWithoutIngregientsAfterAuth" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Diplom_2" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FailedLoginUserTest" />
-      <option name="METHOD_NAME" value="loginUnderAnExistingUser" />
+      <option name="MAIN_CLASS_NAME" value="CreatOrderAuthUserTest" />
+      <option name="METHOD_NAME" value="createOrderWithoutIngregientsAfterAuth" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginUserTest.createCreatingAnExistingUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GetOrderAuthUserTest.getOrdersAuthUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Diplom_2" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LoginUserTest" />
-      <option name="METHOD_NAME" value="createCreatingAnExistingUser" />
+      <option name="MAIN_CLASS_NAME" value="GetOrderAuthUserTest" />
+      <option name="METHOD_NAME" value="getOrdersAuthUser" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginUserTest.createUniqueUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UpdateDataUserTest.DoNotUpdateDataWithoutAuth" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Diplom_2" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LoginUserTest" />
-      <option name="METHOD_NAME" value="createUniqueUser" />
+      <option name="MAIN_CLASS_NAME" value="UpdateDataUserTest" />
+      <option name="METHOD_NAME" value="DoNotUpdateDataWithoutAuth" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginUserTest.loginUnderAnExistingUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UpdateDataUserTest.UpdateDataWithAuth" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Diplom_2" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LoginUserTest" />
-      <option name="METHOD_NAME" value="loginUnderAnExistingUser" />
+      <option name="MAIN_CLASS_NAME" value="UpdateDataUserTest" />
+      <option name="METHOD_NAME" value="UpdateDataWithAuth" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -111,11 +117,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FailedLoginUserTest.loginUnderAnExistingUser" />
-        <item itemvalue="JUnit.LoginUserTest.loginUnderAnExistingUser" />
-        <item itemvalue="JUnit.LoginUserTest.createCreatingAnExistingUser" />
-        <item itemvalue="JUnit.LoginUserTest.createUniqueUser" />
-        <item itemvalue="JUnit.CreateUserTest.createUniqueUser" />
+        <item itemvalue="JUnit.CreatOrderAuthUserTest.createOrderWithoutIngregientsAfterAuth" />
+        <item itemvalue="JUnit.CreatOrderAuthUserTest.createOrderWithIngredientsAfterAuth" />
+        <item itemvalue="JUnit.UpdateDataUserTest.UpdateDataWithAuth" />
+        <item itemvalue="JUnit.UpdateDataUserTest.DoNotUpdateDataWithoutAuth" />
+        <item itemvalue="JUnit.GetOrderAuthUserTest.getOrdersAuthUser" />
       </list>
     </recent_temporary>
   </component>
@@ -144,7 +150,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713864609564</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add tests for login users.">
+      <option name="closed" value="true" />
+      <created>1713874811513</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1713874811513</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -161,6 +175,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add README.md" />
     <MESSAGE value="Add tests for creating user." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add tests for creating user." />
+    <MESSAGE value="Add tests for login users." />
+    <MESSAGE value="Add tests for creating and receiving order." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add tests for creating and receiving order." />
   </component>
 </project>

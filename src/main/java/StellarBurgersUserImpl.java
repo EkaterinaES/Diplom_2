@@ -1,3 +1,4 @@
+import io.qameta.allure.Step;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.LogDetail;
 import io.restassured.response.Response;
@@ -20,8 +21,11 @@ public class StellarBurgersUserImpl implements StellarBurgersUser {
     private static final String CREATE_USER_ENDPOINT = "/api/auth/register";
     private static final String DELETE_USER_ENDPOINT = "/api/auth/user";
     private static final String AUTH_USER_ENDPOINT = "/api/auth/login";
+    private static final String DATA_UPDATE_ENDPOINT = "/api/auth/user";
+    private static final String LOGOUT_USER_ENDPOINT = "api/auth/logout";
 
     @Override
+    @Step("Creating a user")
     public Response createUser(User user) {
         return given()
                 .spec(requestSpecification)
@@ -30,8 +34,9 @@ public class StellarBurgersUserImpl implements StellarBurgersUser {
     }
 
     @Override
-    public Response deleteUser(String accessToken) {
-        return given()
+    @Step("Deleting a user")
+    public void deleteUser(String accessToken) {
+        given()
                 .header("Authorization", "Bearer " + accessToken)
                 .spec(requestSpecification)
                 .delete(DELETE_USER_ENDPOINT);
@@ -39,6 +44,7 @@ public class StellarBurgersUserImpl implements StellarBurgersUser {
 
 
     @Override
+    @Step("User authorization")
     public Response authUser(AuthUser authUser) {
         return given()
                 .spec(requestSpecification)
@@ -47,11 +53,30 @@ public class StellarBurgersUserImpl implements StellarBurgersUser {
     }
 
     @Override
-    public Response authUserToken(AuthUserWithToken authUserWithToken) {
+    @Step("Changing user data")
+    public Response dataUpdate(User user, String accessToken) {
         return given()
+                .header("Authorization", "Bearer " + accessToken)
                 .spec(requestSpecification)
-                .body(authUserWithToken)
-                .post(AUTH_USER_ENDPOINT);
+                .body(user)
+                .patch(DATA_UPDATE_ENDPOINT);
     }
 
+    @Override
+    @Step("Changing user data without authorization")
+    public Response dataUpdateWithoutAuth(User user) {
+        return given()
+                .spec(requestSpecification)
+                .body(user)
+                .patch(DATA_UPDATE_ENDPOINT);
+    }
+
+    @Override
+    @Step("User logout")
+    public void logoutUser(String refreshToken) {
+        given()
+                .spec(requestSpecification)
+                .body(refreshToken)
+                .patch(LOGOUT_USER_ENDPOINT);
+    }
 }

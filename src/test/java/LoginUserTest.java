@@ -49,8 +49,7 @@ public class LoginUserTest {
     @After
     public void cleanUp() {
         StringBuilder accessTokenWithoutBearer = new StringBuilder(accessToken);
-        accessTokenWithoutBearer.delete(0, 7);
-        String accessTokenForDelete = accessTokenWithoutBearer.toString();
+        String accessTokenForDelete = accessTokenWithoutBearer.delete(0, 7).toString();
         userMetods.deleteUser(accessTokenForDelete);
     }
 }
