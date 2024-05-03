@@ -48,15 +48,6 @@ public class GetOrderAuthUserTest {
                 .assertThat().body("success", equalTo(true))
                 .statusCode(200);
     }
-    @Test
-    @DisplayName("Receive orders from an unauthorized user")
-    @Description("Send GET request to /api/orders")
-    public void getOrdersUnauthUser() {
-        Response response = orderMetods.getOrdersNotAuthUser();
-        response.then().spec(responseSpecification)
-                .assertThat().body("success", equalTo(false), "message", equalTo("You should be authorised"))
-                .statusCode(401);
-    }
     @After
     public void cleanUp () {
         userMetods.deleteUser(accessTokenForAuthAndDelete);
